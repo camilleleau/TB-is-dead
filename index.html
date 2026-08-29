@@ -13,8 +13,10 @@
         }
 
         textarea {
-            width: 50%;
+            width: 100%;
+            max-width: 500px;
             height: 30px;
+            box-sizing: border-box;
         }
 
         button {
@@ -25,6 +27,13 @@
         #resultat {
             margin-top: 20px;
             font-weight: bold;
+        }
+        #imageResultat {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin-top: 20px;
         }
 
     </style>
@@ -41,7 +50,7 @@
     <button onclick="valider()">Valider</button>
 
     <div id="resultat"></div>
-    <img id="imageResultat" src="" width="300">
+    <img id="imageResultat" src="">
 
     <script>
         function valider() {
@@ -55,7 +64,7 @@
                 img.src = "josh-dun-twenty-one-pilots.gif";
             } else if (texte == "nico") {
                 document.body.style.backgroundColor = "#292828";
-                resultat.textContent = "Tu es tomber dans le piege";
+                resultat.textContent = "Tu es tombé dans le piège";
                img.src = "nico-bishop-smoking-twenty-one-pilots.gif";
             } else {
                 document.body.style.backgroundColor = "#de4343";
