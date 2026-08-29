@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Qui a tué le poreteur de torche ?</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+
+        #resultat {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .bon {
+            color: green;
+        }
+
+        .pas-bon {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Qui a tué le poreteur de torche ?</h1>
+
+    <textarea id="texte" placeholder="Écris ton texte ici..."></textarea>
+
+    <br>
+
+    <button onclick="valider()">Valider</button>
+
+    <div id="resultat"></div>
+
+    <script>
+        function valider() {
+            const texte = document.getElementById("texte").value;
+            const resultat = document.getElementById("resultat");
+
+            if (texte === "personne") {
+                resultat.textContent = "Texte correct !";
+                resultat.className = "bon";
+            } else {
+                resultat.textContent = "Texte incorrect !";
+                resultat.className = "pas-bon";
+            }
+        }
+    </script>
+
+</body>
+</html>
