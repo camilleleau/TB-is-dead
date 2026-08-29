@@ -13,7 +13,7 @@
         }
 
         textarea {
-            width: 100%;
+            width: 50%;
             height: 150px;
         }
 
@@ -27,13 +27,6 @@
             font-weight: bold;
         }
 
-        .bon {
-            color: green;
-        }
-
-        .pas-bon {
-            color: red;
-        }
     </style>
 </head>
 
@@ -53,13 +46,13 @@
         function valider() {
             const texte = document.getElementById("texte").value;
             const resultat = document.getElementById("resultat");
-
-            if (texte === "personne") {
-                resultat.textContent = "Texte correct !";
-                resultat.className = "bon";
+        
+            if (texte === "bonjour") {
+                document.body.style.backgroundColor = "green";
+                resultat.textContent = "Félicitation tu as trouvé";
             } else {
-                resultat.textContent = "Texte incorrect !";
-                resultat.className = "pas-bon";
+                document.body.style.backgroundColor = "red";
+                resultat.textContent = "NNAAANNNN RECOMMENCE";
             }
         }
     </script>
