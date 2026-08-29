@@ -44,10 +44,10 @@
 
     <script>
         function valider() {
-            const texte = document.getElementById("texte").value;
+            const texte = document.getElementById("texte").value.toLowerCase();
             const resultat = document.getElementById("resultat");
         
-            if (texte.toLowerCase() == "personne") {
+            if (texte == "personne") {
                 document.body.style.backgroundColor = "green";
                 resultat.textContent = "Félicitation tu as trouvé";
             } else {
