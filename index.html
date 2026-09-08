@@ -57,19 +57,31 @@
             const resultat = document.getElementById("resultat");
             const img = document.getElementById("imageResultat");
         
-            if (texte == "personne") {
-                document.body.style.backgroundColor = "green";
-                resultat.textContent = "Félicitation tu as trouvé";
-                img.src = "josh-dun-twenty-one-pilots.gif";
-            } else if (texte == "nico") {
-                document.body.style.backgroundColor = "#292828";
-                resultat.textContent = "Tu es tombé dans le piège";
-               img.src = "nico-bishop-smoking-twenty-one-pilots.gif";
-            } else {
-                document.body.style.backgroundColor = "#de4343";
-                resultat.textContent = "Pourquoi ?";
-               img.src = "squad-coming.gif";
-            }
+            switch (texte) {
+                    case "personne":
+                        document.body.style.backgroundColor = "green";
+                        resultat.textContent = "Félicitation tu as trouvé";
+                        img.src = "josh-dun-twenty-one-pilots.gif";
+                    case "personne":
+                        document.body.style.backgroundColor = "green";
+                        resultat.textContent = "Félicitation tu as trouvé";
+                        img.src = "josh-dun-twenty-one-pilots.gif";
+                    case "nico":
+                        document.body.style.backgroundColor = "#292828";
+                        resultat.textContent = "Tu es tombé dans le piège";
+                        img.src = "nico-bishop-smoking-twenty-one-pilots.gif";
+                    case "neli":
+                        document.body.style.backgroundColor = "#D62420";
+                        resultat.textContent = "Félicitation tu as trouvé";
+                        img.src = "neli.gif";
+                    case "nici":
+                        document.body.style.backgroundColor = "#FFD800";
+                        resultat.textContent = "Il est pas méchant a ce point la";
+                        img.src = "Nici.gif";                    
+                    default:
+                        document.body.style.backgroundColor = "#de4343";
+                        resultat.textContent = "Pas le bon bishop";
+                        img.src = "squad-coming.gif";
         }
     </script>
 
