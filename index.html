@@ -53,9 +53,9 @@
         font-weight: bold;
     }
 
-   #imageResultat {
+  #imageResultat {
     display: block;
-    max-width: 800px;
+    max-width: 100%;
     max-height: 800px;
     width: auto;
     height: auto;
@@ -235,17 +235,17 @@
 
     // Agrandit l'image pour que son plus grand côté fasse 1000 px
     img.onload = function() {
-        const largeur = img.naturalWidth;
-        const hauteur = img.naturalHeight;
+    const largeur = img.naturalWidth;
+    const hauteur = img.naturalHeight;
 
-        if (largeur >= hauteur) {
-            img.width = 800;
-            img.height = Math.round(hauteur * (800 / largeur));
-        } else {
-            img.height = 800;
-            img.width = Math.round(largeur * (800 / hauteur));
-        }
-    };
+    if (largeur >= hauteur) {
+        img.style.width = "800px";
+        img.style.height = "auto";
+    } else {
+        img.style.width = "auto";
+        img.style.height = "800px";
+    }
+};
 }
     </script>
 
