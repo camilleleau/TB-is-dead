@@ -2,40 +2,73 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qui a tué le porteur de torche ?</title>
 
     <style>
-        body {
-            font-family: Arial;
-            margin: 50px auto;
-            padding: 20px;
-        }
+    * {
+        box-sizing: border-box;
+    }
 
-        textarea {
-            width: 100%;
-            max-width: 150px;
-            height: 30px;
-            box-sizing: border-box;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 30px 15px;
+        min-height: 100vh;
 
-        button {
-            margin-top: 10px;
-            padding: 10px 20px;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
-        #resultat {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        #imageResultat {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin-top: 20px;
-        }
+        overflow-x: hidden;
+    }
 
-    </style>
+    h1 {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        font-size: clamp(24px, 6vw, 40px);
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 400px;
+        height: 40px;
+        padding: 8px;
+        resize: none;
+        font-family: Arial, sans-serif;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    #resultat {
+        width: 100%;
+        max-width: 800px;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    #imageResultat {
+        display: block;
+
+        /*
+         * Le GIF ne dépassera jamais
+         * 600px de largeur OU 600px de hauteur.
+         */
+        max-width: min(600px, 100%);
+        max-height: 600px;
+
+        width: auto;
+        height: auto;
+
+        margin: 20px auto 0;
+    }
+</style>
 </head>
 
 <body>
