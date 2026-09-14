@@ -55,8 +55,8 @@
 
    #imageResultat {
     display: block;
-    max-width: 1000px;
-    max-height: 1000px;
+    max-width: 800px;
+    max-height: 800px;
     width: auto;
     height: auto;
     margin: 20px auto 0;
@@ -239,11 +239,11 @@
         const hauteur = img.naturalHeight;
 
         if (largeur >= hauteur) {
-            img.width = 1000;
-            img.height = Math.round(hauteur * (1000 / largeur));
+            img.width = 800;
+            img.height = Math.round(hauteur * (800 / largeur));
         } else {
-            img.height = 1000;
-            img.width = Math.round(largeur * (1000 / hauteur));
+            img.height = 800;
+            img.width = Math.round(largeur * (800 / hauteur));
         }
     };
 }
