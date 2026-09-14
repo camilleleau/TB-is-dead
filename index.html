@@ -232,7 +232,21 @@
                         img.src = "squad-coming.gif";
                     break;
             }
+
+    // Agrandit l'image pour que son plus grand côté fasse 1000 px
+    img.onload = function() {
+        const largeur = img.naturalWidth;
+        const hauteur = img.naturalHeight;
+
+        if (largeur >= hauteur) {
+            img.width = 1000;
+            img.height = Math.round(hauteur * (1000 / largeur));
+        } else {
+            img.height = 1000;
+            img.width = Math.round(largeur * (1000 / hauteur));
         }
+    };
+}
     </script>
 
 </body>
