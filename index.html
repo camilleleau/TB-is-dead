@@ -99,14 +99,14 @@
 
     <br>
 
-    <button onclick="valider()">Valider</button>
+    <button id="boutonValider" onclick="valider()">Valider</button>
 
     <div id="resultat"></div>
     <img id="imageResultat" src="">
     <div id="BanditoPage" style="display: none;">
+    <button onclick="retour()">Retour</button>
         <img id="lastpage" src="banditopage.png">
         <img id="pétale" src="">
-        <button onclick="retour()">Retour</button>
     </div>
     <script>
         function valider() {
@@ -307,7 +307,8 @@
         document.querySelector("body > br").style.display = "none";
         document.getElementById("resultat").style.display = "none";
         document.getElementById("imageResultat").style.display = "none";
-
+        document.getElementById("boutonValider").style.display = "none";
+        
         document.getElementById("BanditoPage").style.display = "flex";
 
         document.getElementById("lastpage").src = "banditopage.png";
@@ -320,7 +321,7 @@
         document.querySelector("h1").style.display = "";
         document.getElementById("texte").style.display = "";
         document.querySelector("body > br").style.display = "";
-
+        document.getElementById("boutonValider").style.display = "";
         document.getElementById("resultat").style.display = "";
         document.getElementById("imageResultat").style.display = "";
 
