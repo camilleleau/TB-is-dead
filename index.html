@@ -75,18 +75,29 @@
     margin: 20px auto;
 }
 
-#pétale {
-    display: block;
-    max-width: 800px;
-    max-height: 800px;
-    width: auto;
-    height: auto;
-    margin: 20px auto;
-}
-
 #boutonPage {
     display: block;
     margin: 15px auto;
+}
+        #contenuFinal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+#pétaleGauche,
+#pétaleDroite {
+    width: 260px;
+    height: 462px;
+    object-fit: contain;
+}
+
+#lastpage {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
 }
 </style>
 </head>
@@ -104,9 +115,13 @@
     <div id="resultat"></div>
     <img id="imageResultat" src="">
     <div id="BanditoPage" style="display: none;">
-    <button onclick="retour()">Retour</button>
-        <img id="lastpage" src="banditopage.png">
-        <img id="pétale" src="">
+        <button onclick="retour()">Retour</button>
+    
+        <div id="contenuFinal">
+            <img id="pétaleGauche" src="">
+            <img id="lastpage" src="banditopage.png">
+            <img id="pétaleDroite" src="">
+        </div>
     </div>
     <script>
         function valider() {
@@ -312,7 +327,8 @@
         document.getElementById("BanditoPage").style.display = "flex";
 
         document.getElementById("lastpage").src = "banditopage.png";
-        document.getElementById("pétale").src = "TON-GIF.gif";
+        document.getElementById("pétaleGauche").src = "b1equi.gif";
+        document.getElementById("pétaleDroite").src = "b1equi.gif";
     }
 
 
