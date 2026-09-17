@@ -61,6 +61,33 @@
     height: auto;
     margin: 20px auto 0;
 }
+        #BanditoPage {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lastpage {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 20px auto;
+}
+
+#pétale {
+    display: block;
+    max-width: 800px;
+    max-height: 800px;
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+}
+
+#boutonPage {
+    display: block;
+    margin: 15px auto;
+}
 </style>
 </head>
 
@@ -94,8 +121,9 @@
                         img.src = "josh-dun-twenty-one-pilots.gif";
                     
                         const boutonPage = document.createElement("button");
+                        boutonPage.id = "boutonPage";
                         boutonPage.textContent = "Rejoint la révolte ->";
-                        boutonPage.onclick = BanditoPage();
+                        boutonPage.onclick = BanditoPage;
                         resultat.appendChild(boutonPage);
                     
                     break;
@@ -174,8 +202,8 @@
                     case "gaspard":
                     case "gøatspard":
                         document.body.style.backgroundColor = "#FCE300";
-                        resultat.textContent = "gaspard ";                                       //TODO phrase    
-                        img.src = "strap.gif";                                                   //TODO GIF     
+                        resultat.textContent = "Bah nan il peut pas tuer TB il est au ciné ";                                       
+                        img.src = "giphy.gif";                                                   
                     break;
                     case "kami":
                     case "misskami":
@@ -255,48 +283,49 @@
                         resultat.textContent = "BRAVO! Tu as gagné le droit de rééssayer";
                         img.src = "squad-coming.gif";
                     break;
-            }
-        function BanditoPage() {
-            document.querySelector("h1").style.display = "none";
-            document.getElementById("texte").style.display = "none";
-            document.querySelector("body > br").style.display = "none";
-            document.querySelector("button").style.display = "none";
-            document.getElementById("resultat").style.display = "none";
-            document.getElementById("imageResultat").style.display = "none";
-        
-            document.getElementById("BanditoPage").style.display = "flex";
-            document.getElementById("BanditoPage").style.flexDirection = "column";
-            document.getElementById("BanditoPage").style.alignItems = "center";
-        
-            document.getElementById("lastpage").src = "banditopage.png";
-            document.getElementById("pétale").src = "TON-GIF.gif";
-        }
-        
-        function retour() {
-            document.querySelector("h1").style.display = "";
-            document.getElementById("texte").style.display = "";
-            document.querySelector("body > br").style.display = "";
-            document.querySelector("button").style.display = "";
-            document.getElementById("resultat").style.display = "";
-            document.getElementById("imageResultat").style.display = "";
-        
-            document.getElementById("BanditoPage").style.display = "none";
-        }
-            
-    
+             }
+
         img.onload = function() {
-        const largeur = img.naturalWidth;
-        const hauteur = img.naturalHeight;
-    
-        if (largeur >= hauteur) {
-            img.style.width = "650px";
-            img.style.height = "auto";
-        } else {
-            img.style.width = "auto";
-            img.style.height = "650px";
-        }
-    };
-}
+            const largeur = img.naturalWidth;
+            const hauteur = img.naturalHeight;
+
+            if (largeur >= hauteur) {
+                img.style.width = "650px";
+                img.style.height = "auto";
+            } else {
+                img.style.width = "auto";
+                img.style.height = "650px";
+            }
+        };
+    }
+
+
+    function BanditoPage() {
+
+        document.querySelector("h1").style.display = "none";
+        document.getElementById("texte").style.display = "none";
+        document.querySelector("body > br").style.display = "none";
+        document.getElementById("resultat").style.display = "none";
+        document.getElementById("imageResultat").style.display = "none";
+
+        document.getElementById("BanditoPage").style.display = "flex";
+
+        document.getElementById("lastpage").src = "banditopage.png";
+        document.getElementById("pétale").src = "TON-GIF.gif";
+    }
+
+
+    function retour() {
+
+        document.querySelector("h1").style.display = "";
+        document.getElementById("texte").style.display = "";
+        document.querySelector("body > br").style.display = "";
+
+        document.getElementById("resultat").style.display = "";
+        document.getElementById("imageResultat").style.display = "";
+
+        document.getElementById("BanditoPage").style.display = "none";
+    }
     </script>
 
 </body>
